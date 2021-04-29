@@ -568,16 +568,17 @@ div.card-stars input {
   color: rgb(255, 221, 68);
   cursor: pointer;
 }
-.card-stars input:checked ~ label {
-  color: rgb(255, 221, 68);
-}
-.card-stars input#rate-1:checked ~ label {
-  color: rgb(255, 221, 68);
-}
 .card-stars input#rate-5:checked ~ label {
   color: rgb(255, 221, 68) !important;
   text-shadow: 0 0 20px rgb(255, 171, 107);
 }
+.card-stars input:checked ~ label {
+  color: rgb(255, 221, 68) !important;
+}
+.card-stars input#rate-1:checked ~ label {
+  color: rgb(255, 221, 68) !important;
+}
+
 div.card-stars form textarea#textUlasan {
   outline: none;
   -webkit-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset 0px -2px 4px rgba(0, 0, 0, 0.1), inset -4px -4px 4px rgba(0, 0, 0, 0.12);

@@ -1195,28 +1195,68 @@ label.btn-booking:active {
 
 /* ----------------------------------login---------------------------------- */
 
-main.login-container::before {
-  content: "";
-  width: 500px;
-  height: 500px;
-  display: block;
-  position: absolute;
-  background-color: #043f3d;
-  clip-path: circle(30% at left bottom);
-  bottom: 0px;
+.login-right {
+  /* justify-content: center; */
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 45px;
 }
-.login-left img {
-  width: 90%;
-  margin: auto;
-}
-.login-left h4 {
-  color: #043f3d;
-  font-family: "Poppins";
-  font-size: 30px;
+
+.login-card-container {
+  position: relative;
+  width: 450px;
 }
 .login-right .card {
   border-radius: 20px;
+  -webkit-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.1), inset -4px -4px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.1), inset -4px -4px 4px rgba(0, 0, 0, 0.12);
+  background: -o-linear-gradient(331.95deg, rgba(186, 214, 255, 0.5) -11.12%, rgba(0, 8, 21, 0) 142.19%);
+  background: linear-gradient(118.05deg, rgba(186, 214, 255, 0.5) -11.12%, rgba(0, 8, 21, 0) 142.19%);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
+
+div.card-logo .logo {
+  width: 80px;
+  height: 80px;
+  background-color: #043f3d;
+  border-radius: 50%;
+  margin: 0px auto;
+}
+div.card-logo h3 {
+  font-size: 20px;
+  color: #043f3d;
+}
+
+label.label-login-page {
+  color: #043f3d;
+  font-family: "Opensans-bold";
+}
+
+input.costum-input-form {
+  background-color: transparent;
+  border: 1px solid #043f3d;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+input.costum-input-form:active,
+input.costum-input-form:focus {
+  background-color: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid rgb(4, 63, 61);
+  -webkit-box-shadow: 0px 0px 5px rgba(18, 255, 247, 0.8);
+  box-shadow: 0px 0px 5px rgba(18, 255, 247, 0.8);
+}
+
 button.btn-login {
   color: #fff;
   border-radius: 10px;
@@ -1242,16 +1282,82 @@ button.btn-login:active {
 }
 a.lupa-password {
   color: rgba(15, 74, 72, 0.31);
+  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 a.lupa-password:hover {
   color: #043f3d;
 }
+.container-login {
+  height: 100vh;
+  background-color: #fffbd5;
+  position: relative;
+  overflow: hidden;
+}
+div.image {
+  background-image: url("../image/4.png");
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%);
+  border: none;
+  outline: none;
+}
+div.image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.51%, #0f4a48), to(transparent));
+  background: -o-linear-gradient(left, #0f4a48 2.51%, transparent);
+  background: linear-gradient(to right, #0f4a48 2.51%, transparent);
+  width: 70%;
+  height: 100%;
+  left: -50px;
+  top: 0px;
+  bottom: 0px;
+}
+div.image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: -webkit-gradient(linear, right top, left top, from(#fffbd5), to(transparent));
+  background: -o-linear-gradient(right, #fffbd5, transparent);
+  background: linear-gradient(to left, #fffbd5, transparent);
+  width: 300px;
+  height: 100%;
+  right: -1px;
+  top: 0px;
+  bottom: 0px;
+}
 
 /* ======================================================RESPONSIVE BREAK POIN================================================== */
 
 /*======================== // Extra small devices (portrait phones, less than 576px) //========================*/
+@media (max-height: 600px) {
+  .container-login {
+    height: 100vh;
+    background-color: #fffbd5;
+    position: relative;
+    overflow-y: auto;
+  }
+  .login-card-container {
+    position: relative;
+    width: 100%;
+    top: 80px;
+  }
+}
 @media (max-width: 575.98px) {
+  /* login page */
+
+  /* sukses */
+
   .section-sukses h1 {
     color: #043f3d;
     font-family: "Opensans-bold";
@@ -1465,8 +1571,6 @@ a.lupa-password:hover {
     padding: 10px;
   }
 
-  
-
   /* ====================================================================================================== */
   /* =============================================TENTANG KAMI============================================= */
   /* ====================================================================================================== */
@@ -1569,6 +1673,8 @@ a.lupa-password:hover {
 }
 /* ========================// Small devices (landscape phones, 576px and up) //========================*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+  /* login page */
+
   /* portfolio Page */
   ul.controls li.buttons {
     font-size: 13px;
@@ -1825,7 +1931,10 @@ a.lupa-password:hover {
 }
 /* ========================// Medium devices (tablets, 768px and up) //======================== */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* login page */
+
   /* portfolio Page */
+
   ul.controls li.buttons {
     font-size: 13px;
     padding: 5px 10px;
@@ -2014,12 +2123,10 @@ a.lupa-password:hover {
 
 /* ========================// Large devices (desktops, 992px and up)//======================== */
 @media (min-width: 992px) and (max-width: 1391.98px) {
-  main.login-container {
-    background: -webkit-gradient(linear, left top, right top, color-stop(70%, #ffff), color-stop(30%, #043f3d));
-    background: linear-gradient(90deg, #ffff 70%, #043f3d 30%);
-    width: 100vw;
-    height: 100vh;
+  .login-card-container {
     position: relative;
+    width: 450px;
+    margin-right: 30px;
   }
   /* ====================================PARALAX==================================== */
   div.paralax {
@@ -2046,13 +2153,6 @@ a.lupa-password:hover {
 
 /* ========================// Extra large devices (large desktops, 1200px and up)//======================== */
 @media (min-width: 1400px) and (max-width: 1991.98px) {
-  main.login-container {
-    background: -webkit-gradient(linear, left top, right top, color-stop(70%, #ffff), color-stop(30%, #043f3d));
-    background: linear-gradient(90deg, #ffff 70%, #043f3d 30%);
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  }
   /*-===================================== HEADER-===================================== */
   div.header-content {
     padding: 280px 10px 300px;

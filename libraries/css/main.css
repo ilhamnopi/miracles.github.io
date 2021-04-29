@@ -568,6 +568,9 @@ div.card-stars input {
   color: rgb(255, 221, 68);
   cursor: pointer;
 }
+.card-stars input:checked ~ label {
+  color: rgb(255, 221, 68);
+}
 .card-stars input#rate-1:checked ~ label {
   color: rgb(255, 221, 68);
 }
@@ -1459,6 +1462,17 @@ a.lupa-password:hover {
     top: -9px;
     cursor: pointer;
     padding: 10px;
+  }
+
+  .card-stars input:checked ~ label {
+    color: rgb(255, 221, 68);
+  }
+  .card-stars input#rate-1:checked ~ label {
+    color: rgb(255, 221, 68);
+  }
+  .card-stars input#rate-5:checked ~ label {
+    color: rgb(255, 221, 68) !important;
+    text-shadow: 0 0 20px rgb(255, 171, 107);
   }
 
   /* ====================================================================================================== */

@@ -568,9 +568,8 @@ div.card-stars input {
   color: rgb(255, 221, 68);
   cursor: pointer;
 }
-.card-stars input:checked ~ label {
+.card-stars input#rate-1:checked ~ label {
   color: rgb(255, 221, 68);
-  text-shadow: 0 0 20px rgb(255, 171, 107);
 }
 .card-stars input#rate-5:checked ~ label {
   color: rgb(255, 221, 68) !important;
@@ -737,7 +736,7 @@ li.breadcrumb-item.active {
 
 div.header-right-about img {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   margin-left: 50px;
 }
 

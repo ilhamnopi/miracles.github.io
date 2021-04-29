@@ -408,15 +408,13 @@ div.grid-item:hover:before {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  background: -webkit-linear-gradient(179.97deg, rgba(15, 74, 72, 0.31) 0.02%, rgba(0, 0, 0, 0.31) 99.98%);
-  background: -webkit-linear-gradient(270.03deg, rgba(15, 74, 72, 0.31) 0.02%, rgba(0, 0, 0, 0.31) 99.98%);
+  background: -o-linear-gradient(270.03deg, rgba(15, 74, 72, 0.31) 0.02%, rgba(0, 0, 0, 0.31) 99.98%);
   background: linear-gradient(179.97deg, rgba(15, 74, 72, 0.31) 0.02%, rgba(0, 0, 0, 0.31) 99.98%);
   border: none;
   outline: none;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(2px);
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   cursor: pointer;
 }
 div.grid-container {
@@ -1393,11 +1391,10 @@ a.lupa-password:hover {
     height: 100%;
     inset: 0px;
     margin-top: -5px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
   }
-
   /*=====================================REKOMENDASI PAKET===================================== */
   div.grid-container {
     display: -ms-grid;

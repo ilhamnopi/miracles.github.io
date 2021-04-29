@@ -56,7 +56,7 @@ btn.onclick = () => {
   return false;
 };
 
-// Smooth scrool on click
+// ======================================Smooth scrool on click
 $(document).ready(function () {
   // Add smooth scrolling to all links
   $("a").on("click", function (event) {

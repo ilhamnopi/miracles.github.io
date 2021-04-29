@@ -528,13 +528,12 @@ div.box-profile-image:after {
   content: url(../image/ic-frame.png);
   display: block;
   position: absolute;
-  /* background-image: ; */
 }
 div.stars {
   margin-top: 25px !important;
 }
 div.stars i.fa-star {
-  color: #ffb923;
+  color: rgb(255, 185, 35);
 }
 div.nama h3 {
   font-family: "Opensans-bold";
@@ -553,21 +552,28 @@ div.card-stars input {
   font-size: 30px;
   color: rgba(0, 100, 70, 0.2);
   float: right;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
   transition: 0.2s linear;
   position: relative;
   display: block;
   padding: 20px;
 }
-.card-stars input:not(:checked) ~ label:hover,
+
+.card-stars input:not(:checked) ~ label:hover {
+  color: rgb(255, 221, 68);
+  cursor: pointer;
+}
 .card-stars input:not(:checked) ~ label:hover ~ label {
-  color: #fd4;
+  color: rgb(255, 221, 68);
   cursor: pointer;
 }
 .card-stars input:checked ~ label {
-  color: #fd4;
+  color: rgb(255, 221, 68);
+  text-shadow: 0 0 20px rgb(255, 171, 107);
 }
 .card-stars input#rate-5:checked ~ label {
-  color: #fd4;
+  color: rgb(255, 221, 68) !important;
   text-shadow: 0 0 20px rgb(255, 171, 107);
 }
 div.card-stars form textarea#textUlasan {
@@ -581,6 +587,18 @@ div.card-stars form textarea#textUlasan {
   resize: none;
   color: #0f4a48;
   width: 100%;
+}
+textarea#textUlasan::-webkit-input-placeholder {
+  color: rgba(33, 90, 88, 0.5) !important;
+}
+textarea#textUlasan::-moz-placeholder {
+  color: rgba(33, 90, 88, 0.5) !important;
+}
+textarea#textUlasan:-ms-input-placeholder {
+  color: rgba(33, 90, 88, 0.5) !important;
+}
+textarea#textUlasan::-ms-input-placeholder {
+  color: rgba(33, 90, 88, 0.5) !important;
 }
 textarea#textUlasan::placeholder {
   color: rgba(33, 90, 88, 0.5) !important;
@@ -599,6 +617,8 @@ header.header-text {
   font-size: 25px;
   font-family: "Opensans-bold";
   text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   margin: 5px 0 20px 0;
 }
@@ -627,6 +647,7 @@ div.helo {
 div.post {
   display: none;
   position: relative;
+  -webkit-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.1), inset -4px -4px 4px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.1), inset -4px -4px 4px rgba(0, 0, 0, 0.12);
   padding: 20px;
   border-radius: 20px;

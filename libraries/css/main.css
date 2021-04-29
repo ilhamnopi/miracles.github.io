@@ -561,11 +561,11 @@ div.card-stars input {
 }
 
 .card-stars input:not(:checked) ~ label:hover {
-  color: rgb(255, 221, 68);
+  color: rgb(255, 221, 68) !important;
   cursor: pointer;
 }
 .card-stars input:not(:checked) ~ label:hover ~ label {
-  color: rgb(255, 221, 68);
+  color: rgb(255, 221, 68) !important;
   cursor: pointer;
 }
 .card-stars input#rate-5:checked ~ label {
